@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMove : MonoBehaviour
+public class PlayerMove2 : MonoBehaviour
 {
-
     public float speed = 5f;
     public float jumpForce = 10f;
 
@@ -12,12 +11,12 @@ public class PlayerMove : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
-        float horizontalImput = Input.GetAxis("Horizontal");
+        float horizontalImput = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(0f, 0f, horizontalImput) * speed * Time.deltaTime;
         transform.Translate(movement);
 
@@ -42,5 +41,4 @@ public class PlayerMove : MonoBehaviour
             return;
         }
     }
-
 }
